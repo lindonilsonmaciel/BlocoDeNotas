@@ -1,24 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>600</width>
+    <height>450</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>561</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="actionNovo"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionSalvar"/>
+    <addaction name="actionSalvar_como"/>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <widget class="QMenu" name="menuEditar">
+    <property name="title">
+     <string>Editar</string>
+    </property>
+    <addaction name="actionDesfazer"/>
+    <addaction name="actionRefazer"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopiar"/>
+    <addaction name="actionRecortar"/>
+    <addaction name="actionColar"/>
+   </widget>
+   <widget class="QMenu" name="menuSobre">
+    <property name="title">
+     <string>Sobre</string>
+    </property>
+    <addaction name="actionSobre_o_bloco_de_notas"/>
+   </widget>
+   <addaction name="menuArquivo"/>
+   <addaction name="menuEditar"/>
+   <addaction name="menuSobre"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNovo"/>
+   <addaction name="actionAbrir"/>
+   <addaction name="actionSalvar"/>
+   <addaction name="actionSalvar_como"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopiar"/>
+   <addaction name="actionRecortar"/>
+   <addaction name="actionColar"/>
+   <addaction name="separator"/>
+   <addaction name="actionDesfazer"/>
+   <addaction name="actionRefazer"/>
+   <addaction name="separator"/>
+   <addaction name="actionSobre_o_bloco_de_notas"/>
+   <addaction name="actionSair"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNovo">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/novo.png</normaloff>:/icons/icons/novo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Novo</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/abrir.png</normaloff>:/icons/icons/abrir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir...</string>
+   </property>
+  </action>
+  <action name="actionSalvar">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/salvar.png</normaloff>:/icons/icons/salvar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </action>
+  <action name="actionSalvar_como">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/salvar_como.png</normaloff>:/icons/icons/salvar_como.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salvar como...</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/fechar.png</normaloff>:/icons/icons/fechar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="actionRecortar">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/recurtar.png</normaloff>:/icons/icons/recurtar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Recortar</string>
+   </property>
+  </action>
+  <action name="actionCopiar">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/copiar.png</normaloff>:/icons/icons/copiar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copiar</string>
+   </property>
+  </action>
+  <action name="actionColar">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/colar.png</normaloff>:/icons/icons/colar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colar</string>
+   </property>
+  </action>
+  <action name="actionDesfazer">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/desfazer.png</normaloff>:/icons/icons/desfazer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Desfazer</string>
+   </property>
+  </action>
+  <action name="actionRefazer">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/refazer.png</normaloff>:/icons/icons/refazer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Refazer</string>
+   </property>
+  </action>
+  <action name="actionSobre_o_bloco_de_notas">
+   <property name="icon">
+    <iconset resource="arquivoderecursos.qrc">
+     <normaloff>:/icons/icons/sobre.png</normaloff>:/icons/icons/sobre.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sobre o bloco de notas</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
- <resources/>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="arquivoderecursos.qrc"/>
+ </resources>
  <connections/>
 </ui>
