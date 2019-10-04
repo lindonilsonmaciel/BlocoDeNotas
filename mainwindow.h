@@ -42,6 +42,8 @@ private slots:
 
     void on_actionCor_de_fundo_triggered();
 
+    void on_actionImprimir_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString localArquivo;
