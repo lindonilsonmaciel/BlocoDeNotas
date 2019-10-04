@@ -62,8 +62,17 @@
     </property>
     <addaction name="actionSobre_o_bloco_de_notas"/>
    </widget>
+   <widget class="QMenu" name="menuFormatar">
+    <property name="title">
+     <string>Formatar</string>
+    </property>
+    <addaction name="actionFonte"/>
+    <addaction name="actionCor"/>
+    <addaction name="actionCor_de_fundo"/>
+   </widget>
    <addaction name="menuArquivo"/>
    <addaction name="menuEditar"/>
+   <addaction name="menuFormatar"/>
    <addaction name="menuSobre"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -186,6 +195,21 @@
    </property>
    <property name="text">
     <string>Sobre o bloco de notas</string>
+   </property>
+  </action>
+  <action name="actionFonte">
+   <property name="text">
+    <string>Fonte</string>
+   </property>
+  </action>
+  <action name="actionCor">
+   <property name="text">
+    <string>Cor da fonte</string>
+   </property>
+  </action>
+  <action name="actionCor_de_fundo">
+   <property name="text">
+    <string>Cor de fundo</string>
    </property>
   </action>
  </widget>
